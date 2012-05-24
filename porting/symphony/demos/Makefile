@@ -10,6 +10,9 @@ LIB = -L$(LES_LIBRARY_DIR) -lz -lbz2 -lles -losilesolver -Wl,--rpath -Wl,$(LES_L
 demo_threads:
 	g++ $@.cpp -o $@ $(INCLUDES) $(LIB) -lboost_thread -lboost_system
 
+demo_complex_threads:
+	g++ $@.cpp -o $@ $(INCLUDES) $(LIB) -lboost_thread -lboost_system
+
 demo_symphony_with_lea:
 	g++ $(INCLUDES) $(LIB) $@.cpp -o $@
 
